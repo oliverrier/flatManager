@@ -1,0 +1,7 @@
+{
+  "name": "flatManager",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
