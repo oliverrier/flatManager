@@ -17,5 +17,9 @@ const list: Route = {
   path: '/list',
   name: 'list'
 }
+const oui: Route = {
+  path: '/oui',
+  name: 'oui'
+}
 
-export { profile, details, list}
+export { profile, details, list, oui }
