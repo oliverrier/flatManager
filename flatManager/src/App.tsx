@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Redirect, Route, } from 'react-router-dom';
-import { IonApp, IonRouterOutlet } from '@ionic/react';
+import { IonApp, IonButton, IonModal, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
 /* Core CSS required for Ionic components to work properly */
@@ -23,8 +23,15 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import Details from './pages/Details';
 import ApartmentListings from './pages/apartmentListings';
+import Modal from './components/Modal';
 
 const App: React.FC = () => {
+
+  const [showModal, setShowModal] = useState(false);
+
+  function closeModal() {
+    setShowModal(false);
+  }
   return (
 
     <IonApp>
@@ -35,6 +42,14 @@ const App: React.FC = () => {
           <Route path="/details" component={Details} exact={true} />
         </IonRouterOutlet>
       </IonReactRouter>
+      <IonModal isOpen={showModal}>
+      <Modal 
+        showModal={showModal}
+        setShowModal={setShowModal}
+        closeAction={closeModal}>
+      </Modal>
+    </IonModal>
+    <IonButton onClick={() => setShowModal(true)}>Show Modal</IonButton>
     </IonApp>
   )
 };
