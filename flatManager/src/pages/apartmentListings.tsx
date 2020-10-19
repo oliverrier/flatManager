@@ -10,9 +10,9 @@ const ApartmentListings: React.FC = () => {
             name: "appartement1",
             adress: "5 rue des pissenlits 33000 Bordeaux",
             price: 125000,
-            surface: 45,
+            surface: 50,
             renovation: "non",
-            rent: "Ceci est la rentabilité.",
+            rent: 800,
             vacations: "aled",
             note: "Ceci est une note. L'appartement est cool achetez svp car sinpn je serais triste et voila."
         },
@@ -22,7 +22,7 @@ const ApartmentListings: React.FC = () => {
             price: 134000,
             surface: 45,
             renovation: "non",
-            rent: "Ceci est la rentabilité.",
+            rent: 700,
             vacations: "aled",
             note: "Ceci est une note. L'appartement est cool que les autres donc achetez svp car sinpn je serais triste et voila."
         },
@@ -30,9 +30,9 @@ const ApartmentListings: React.FC = () => {
             name: "appartement3",
             adress: "5 rue des bidules 33000 Bordeaux",
             price: 100000,
-            surface: 45,
+            surface: 120,
             renovation: "non",
-            rent: "Ceci est la rentabilité.",
+            rent: 1200,
             vacations: "aled",
             note: "Ceci est une note. L'appartement est encore plus cool que les autres donc achetez svp car sinpn je serais triste et voila."
         }
@@ -59,7 +59,7 @@ const ApartmentListings: React.FC = () => {
                                 <IonCardHeader>
                                     <IonImg src="https://jojo-app.fr/wp-content/uploads/2018/09/espace-optimise-appartement-meuble-paris.jpg" />
                                     <IonCardSubtitle>{data[1].price} €</IonCardSubtitle>
-                                    <IonCardSubtitle>{data[1].rent}</IonCardSubtitle>
+                                    <IonCardSubtitle>{data[1].rent}€</IonCardSubtitle>
                                     <IonCardTitle>{data[1].adress}</IonCardTitle>
                                     <IonCardSubtitle>02/12/2019</IonCardSubtitle>
 
@@ -75,7 +75,7 @@ const ApartmentListings: React.FC = () => {
                                 <IonCardHeader>
                                     <IonImg src="http://goraguer.fr/wp/wp-content/uploads/2012/06/Appartement-marais-5.jpg" />
                                     <IonCardSubtitle>{data[2].price} €</IonCardSubtitle>
-                                    <IonCardSubtitle>{data[2].rent}</IonCardSubtitle>
+                                    <IonCardSubtitle>{data[2].rent}€</IonCardSubtitle>
                                     <IonCardTitle>{data[2].adress}</IonCardTitle>
                                     <IonCardSubtitle>06/02/2020</IonCardSubtitle>
                                 </IonCardHeader>
@@ -90,7 +90,7 @@ const ApartmentListings: React.FC = () => {
                                 <IonCardHeader>
                                     <IonImg src="http://www.notreloft.com/images/2014/05/Renovation-appartement-haussmannien-0100.jpg" />
                                     <IonCardSubtitle>{data[3].price} €</IonCardSubtitle>
-                                    <IonCardSubtitle>{data[3].rent}  </IonCardSubtitle>
+                                    <IonCardSubtitle>{data[3].rent}€</IonCardSubtitle>
                                     <IonCardTitle>{data[3].adress}  </IonCardTitle>
                                     <IonCardSubtitle>06/02/2020</IonCardSubtitle>
                                 </IonCardHeader>
