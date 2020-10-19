@@ -24,6 +24,7 @@ import './theme/variables.css';
 import Details from './pages/Details';
 import ApartmentListings from './pages/apartmentListings';
 import Modal from './components/Modal';
+import ProfilePage from './pages/ProfilePage';
 
 const App: React.FC = () => {
 
@@ -40,14 +41,15 @@ const App: React.FC = () => {
           <Route path="/list" component={ApartmentListings} exact={true} />
           <Route exact path="/" render={() => <Redirect to="/list" />} />
           <Route path="/details" component={Details} exact={true} />
+          <Route path="/profile" component={ProfilePage} exact={true} />
         </IonRouterOutlet>
       </IonReactRouter>
       <IonModal isOpen={showModal}>
-      <Modal 
+      {/* <Modal 
         showModal={showModal}
         setShowModal={setShowModal}
         closeAction={closeModal}>
-      </Modal>
+      </Modal> */}
     </IonModal>
     <IonButton onClick={() => setShowModal(true)}>Show Modal</IonButton>
     </IonApp>
