@@ -21,8 +21,8 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import ApartmentListings from './pages/ApartmentListings';
 import Details from './pages/Details';
+import ApartmentListings from './pages/apartmentListings';
 
 const App: React.FC = () => {
   return (
@@ -31,7 +31,6 @@ const App: React.FC = () => {
       <IonReactRouter>
         <IonRouterOutlet>
           <Route path="/list" component={ApartmentListings} exact={true} />
-
           <Route exact path="/" render={() => <Redirect to="/list" />} />
           <Route path="/details" component={Details} exact={true} />
         </IonRouterOutlet>
